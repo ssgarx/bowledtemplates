@@ -5,7 +5,7 @@
 .box1 {
   // @include theme_background;
 
-  padding: 0 20px;
+  @include standardBoxMargin;
   .headingBox {
     .mainHeading {
       font-style: normal;

@@ -20,7 +20,11 @@
 }
 @mixin verticalCenter {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@mixin standardBoxMargin {
+  padding: 0 20px;
 }
 $themeTextColor1: #e5e5e5;
