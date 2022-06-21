@@ -1,0 +1,26 @@
+@mixin theme_background {
+  /* The image used */
+  background-image: url("../assets/masterBg1.png"),
+    linear-gradient(
+      180deg,
+      #000000 2.18%,
+      #01002a 37.26%,
+      #761449 106.29%,
+      #ff2b6e 113.06%
+    );
+  position: relative;
+  display: table;
+  width: 100vw;
+  height: 100vh;
+}
+@mixin horizontalCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+$themeTextColor1: #e5e5e5;

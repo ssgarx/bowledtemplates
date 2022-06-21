@@ -1,0 +1,33 @@
+@import "../partials.scss";
+.box1 * {
+  background-color: transparent;
+}
+.box1 {
+  // @include theme_background;
+
+  padding: 0 20px;
+  .headingBox {
+    .mainHeading {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 62px;
+      color: $themeTextColor1;
+      padding-bottom: 23px;
+    }
+    .subHeading {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 39px;
+      color: $themeTextColor1;
+    }
+  }
+  .cardBox {
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
