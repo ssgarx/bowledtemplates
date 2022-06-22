@@ -15,6 +15,7 @@ function Slides() {
     slidesToScroll: 1,
     arrows: false,
     dots: false,
+    infinite: false,
     responsive: [
       {
         breakpoint: 768,
