@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-// import styles from "./Slides.module.scss";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import dummyCard from "../assets/dummyCard.svg";
-import "./Carousel.css";
+import styles from "./Slides.module.scss";
 
 function Slides() {
   const [isAutoPlay, setIsAutoPlay] = useState(true);
-
   return (
-    <div>
+    <div className={styles.carouselBox}>
       <Carousel
         showArrows={false}
         showStatus={false}
@@ -23,15 +21,15 @@ function Slides() {
         }}
       >
         <div>
-          <p class="card_title">Rohit Sharma</p>
+          <p className={styles.card_title}>Rohit Sharma</p>
           <img src={dummyCard} alt="dummyCard" />
         </div>
         <div>
-          <p class="card_title">Rohit Sharma</p>
+          <p className={styles.card_title}>Rohit Sharma</p>
           <img src={dummyCard} alt="dummyCard" />
         </div>
         <div>
-          <p class="card_title">Rohit Sharma</p>
+          <p className={styles.card_title}>Rohit Sharma</p>
           <img src={dummyCard} alt="dummyCard" />
         </div>
       </Carousel>
