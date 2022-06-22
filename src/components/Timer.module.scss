@@ -1,0 +1,18 @@
+.box1 * {
+  background-color: transparent;
+}
+.box1 {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  > span > img {
+    position: relative;
+    top: 1px;
+    margin-right: 8px;
+  }
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.1579px;
+  line-height: 17px;
+}
