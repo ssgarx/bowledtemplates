@@ -1,38 +1,53 @@
-import React, { useState } from "react";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import dummyCard from "../assets/dummyCard.svg";
 import styles from "./Slides.module.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import dummyCard from "../assets/dummyCard.svg";
 
 function Slides() {
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const settings = {
+    centerMode: true,
+    centerPadding: "10px",
+    slidesToShow: 1,
+    speed: 500,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
   return (
-    <div className={styles.carouselBox}>
-      <Carousel
-        showArrows={false}
-        showStatus={false}
-        showThumbs={false}
-        ariaLabel="dummyCard"
-        infiniteLoop={true}
-        autoPlay={isAutoPlay}
-        interval={2000}
-        onSwipeStart={() => {
-          setIsAutoPlay(false);
-        }}
-      >
-        <div>
-          <p className={styles.card_title}>Rohit Sharma</p>
+    <div>
+      <Slider {...settings}>
+        <>
+          <p className={styles.playerName}>Rohit Sharma</p>
           <img src={dummyCard} alt="dummyCard" />
-        </div>
-        <div>
-          <p className={styles.card_title}>Rohit Sharma</p>
+        </>
+        <>
+          <p className={styles.playerName}>Lorem Ipsum</p>
           <img src={dummyCard} alt="dummyCard" />
-        </div>
-        <div>
-          <p className={styles.card_title}>Rohit Sharma</p>
+        </>
+        <>
+          <p className={styles.playerName}>Dolor Sit</p>
           <img src={dummyCard} alt="dummyCard" />
-        </div>
-      </Carousel>
+        </>
+      </Slider>
     </div>
   );
 }

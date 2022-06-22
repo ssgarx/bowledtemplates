@@ -13,6 +13,8 @@ html {
   background-color: black;
   color: #ffffff;
 }
+
+/* CUSTOM SCROLLBAR */
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px; /* height of horizontal scrollbar */
@@ -30,3 +32,35 @@ html {
   background-color: #e5e5e563;
   border-radius: 10px;
 }
+/* CUSTOM SCROLLBAR END */
+
+/* CUSTOM CAROUSEL */
+.slick-slider {
+  width: 100%;
+  overflow: hidden;
+}
+.slick-list {
+  position: relative;
+  display: block !important;
+  width: 100%;
+}
+.slick-slide div {
+  width: auto;
+  margin-right: 10px;
+}
+.slick-slide img {
+  width: calc(100% - 10px) !important;
+}
+
+/* For the demo */
+.slick-prev,
+.slick-next {
+  z-index: 999 !important;
+}
+.slick-prev {
+  left: 25px !important;
+}
+.slick-next {
+  right: 25px !important;
+}
+/* CUSTOM CAROUSEL END */
