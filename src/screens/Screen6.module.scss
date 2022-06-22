@@ -1,0 +1,118 @@
+@import "../partials.scss";
+.box1 {
+  background-color: transparent;
+}
+.box1 {
+  @include standardBoxMargin;
+  //   height: calc(100vh - 130px);
+  overflow-y: scroll;
+  @include verticalCenter;
+  .opponentSection,
+  .mySection {
+    width: 100%;
+  }
+  .opponentSection {
+    flex: 0.6;
+    > p {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    .oppCardBox {
+      text-align: center;
+      > img {
+        width: 40%;
+        height: 40%;
+        object-fit: contain;
+        animation: moveDown 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
+    }
+  }
+  .mySection {
+    flex: 1;
+    .nameBox {
+      @include horizontalCenter;
+      > p {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 34px;
+      }
+    }
+    .statBox {
+      > p {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+      > div {
+        @include horizontalCenter;
+        border: 2px solid white;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        transition: 0.2s ease all;
+        > p {
+          padding: 10px;
+          transition: 0.2s ease all;
+        }
+        > p:nth-child(1) {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 23px;
+          text-align: center;
+        }
+        > p:nth-child(2) {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 26px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+    .cardBox {
+      text-align: center;
+      > img {
+        background-color: transparent;
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+        // animation: fitInPlace 1.5s ease;
+        animation: fitInPlace 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
+    }
+  }
+}
+@keyframes fitInPlace {
+  0% {
+    transform: scale(8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(950px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(-950px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
