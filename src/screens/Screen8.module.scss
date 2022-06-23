@@ -1,0 +1,130 @@
+@import "../partials.scss";
+.box1 * {
+  background-color: transparent;
+}
+$breakWidth: 400px;
+$breakHeight: 770px;
+.box1 {
+  @include standardBoxMargin;
+  .infoSection {
+    > p:nth-child(1) {
+      font-style: normal;
+      color: $themeTextColor1;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 62px;
+      margin-bottom: 50px;
+      @media screen and (max-width: $breakWidth) {
+        font-size: 11vw;
+        line-height: 56px;
+      }
+      @media screen and (max-height: $breakHeight) {
+        margin-bottom: 5vh;
+      }
+    }
+    > p:nth-child(2) {
+      font-style: normal;
+      color: $themeTextColor1;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 39px;
+      @media screen and (max-width: $breakWidth) {
+        font-size: 7vw;
+      }
+    }
+    > p:nth-child(3) {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      margin-bottom: 7px;
+      color: $themeTextColor1;
+      @media screen and (max-width: $breakWidth) {
+        font-size: 10vw;
+      }
+    }
+    > p:nth-child(4) {
+      > span {
+        > img {
+          width: 45px;
+          height: 45px;
+          object-fit: contain;
+          position: relative;
+          top: 7px;
+          margin-right: 5px;
+        }
+      }
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 62px;
+      color: $themeGold1;
+      @media screen and (max-width: 800px) {
+        font-size: 11vw;
+      }
+    }
+  }
+  .mediaSection {
+    margin: 50px 0;
+    @media screen and (max-width: $breakWidth) {
+      margin: 5vh 0;
+    }
+    .header {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      text-align: center;
+      color: $themeTextColor1;
+      @media screen and (max-width: $breakWidth) {
+        font-size: 6vw;
+      }
+    }
+    > div {
+      @include horizontalCenter;
+      margin: 35px;
+      @media screen and (max-width: $breakWidth) {
+        margin: 6vw;
+      }
+    }
+    .redirect {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 34px;
+      text-align: center;
+      color: #ff2b6e;
+      margin: 50px 0px;
+      @media screen and (max-height: $breakHeight) {
+        margin: 5vh 0;
+      }
+      @media screen and (max-width: $breakWidth) {
+        font-size: 6vw;
+      }
+    }
+  }
+  .btnBox {
+    text-align: center;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.04);
+    @include verticalCenter;
+    border-radius: 18px;
+
+    //   position: absolute;
+    //   bottom: 5px;
+    //   width: 100%;
+    > button {
+      width: 95%;
+      height: 60px;
+      background: linear-gradient(180deg, #ff2b6e 0%, #01002a 136.35%);
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+      border-radius: 18px;
+
+      font-family: "Arial";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+}
