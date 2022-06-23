@@ -1,0 +1,83 @@
+.box1 {
+  padding: 10px;
+  .customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    .header {
+      border: 1px solid rgba(255, 0, 0, 0);
+      > th {
+        font-family: "IBM Plex Mono";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        padding: 20px 0;
+      }
+    }
+
+    .row {
+      > td {
+        > div {
+          padding: 8px 0;
+          font-family: "IBM Plex Mono";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 23px;
+          text-align: center;
+          margin: 5px 0;
+        }
+      }
+      > td:nth-child(1) {
+        > div {
+          border-left: 2px solid white;
+          border-top: 2px solid white;
+          border-right: none;
+          border-bottom: 2px solid white;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+      }
+      > td:nth-child(2) {
+        > div {
+          border-left: none;
+          border-top: 2px solid white;
+          border-right: none;
+          border-bottom: 2px solid white;
+        }
+      }
+      > td:nth-child(3) {
+        > div {
+          border-left: none;
+          border-top: 2px solid white;
+          border-right: none;
+          border-bottom: 2px solid white;
+        }
+      }
+      > td:nth-child(4) {
+        > div {
+          border-left: none;
+          border-top: 2px solid white;
+          border-right: 2px solid white;
+          border-bottom: 2px solid white;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+      }
+    }
+  }
+}
+tbody {
+  max-height: calc(100vh - 256px);
+  overflow-y: scroll;
+  display: block;
+  width: 95vw;
+}
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
