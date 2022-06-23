@@ -1,0 +1,54 @@
+@import "../partials.scss";
+.box1 * {
+  background-color: transparent;
+}
+.box1 {
+  @include standardBoxMargin;
+  .iconBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+
+    > div:nth-child(1) {
+      > img {
+        width: 85px;
+        height: 85px;
+        object-fit: contain;
+      }
+      margin-right: 15px;
+    }
+    > div:nth-child(2) {
+      > p:nth-child(1) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 39px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $themeTextColor1;
+      }
+      > p:nth-child(2) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $themeSelected1;
+        > span {
+          > img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            position: relative;
+            top: 3px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
