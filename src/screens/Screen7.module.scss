@@ -1,0 +1,39 @@
+@import "../partials.scss";
+.box1 * {
+  background-color: transparent;
+}
+.box1 {
+  @include standardBoxMargin;
+  @include verticalCenter;
+  border: 1px solid blue;
+  .upperSection {
+    flex: 0.2;
+    border: 1px solid red;
+    width: 100%;
+    > p:nth-child(1) {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 47px;
+    }
+    > p:nth-child(2) {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 62px;
+      color: $themeSelected1;
+    }
+  }
+  .lowerSection {
+    flex: 1;
+    border: 1px solid green;
+    width: 100%;
+
+    height: 100%;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+    }
+  }
+}
