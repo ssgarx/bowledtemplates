@@ -4,8 +4,10 @@ import Timer from "../components/Timer";
 import Uppernav from "../components/Uppernav";
 import styles from "./Screen4.module.scss";
 import dummyCard from "../assets/dummyCard.svg";
+import { useNavigate } from "react-router-dom";
 
 function Screen4() {
+  const navigate = useNavigate();
   const [selectedStatIndex, setSelectedStatIndex] = useState(null);
   const handleStatSelection = (index) => {
     setSelectedStatIndex((prev) => {
@@ -65,6 +67,7 @@ function Screen4() {
         </div>
         <div className={styles.btnBox}>
           <button
+          onClick={() => navigate("/screen5")}
             style={
               selectedStatIndex != null
                 ? {

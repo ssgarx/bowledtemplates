@@ -3,8 +3,10 @@ import Uppernav from "../components/Uppernav";
 import styles from "./Screen7.module.scss";
 import bowledIcon from "../assets/bowledIcon.png";
 import sixIcon from "../assets/sixIcon.png";
+import { useNavigate } from "react-router-dom";
 
 function Screen7() {
+  const navigate = useNavigate();
   const isBowled = false;
   return (
     <>
@@ -23,7 +25,10 @@ function Screen7() {
             </>
           )}
         </div>
-        <div className={styles.lowerSection}>
+        <div
+          onClick={() => navigate("/screen8")}
+          className={styles.lowerSection}
+        >
           {isBowled ? (
             <img src={bowledIcon} alt="bowledIcon" />
           ) : (

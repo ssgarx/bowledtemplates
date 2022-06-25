@@ -8,8 +8,10 @@ import whatsappIcon from "../assets/icons/whatsappIcon.svg";
 import instagramIcon from "../assets/icons/instagramIcon.svg";
 import twitterIcon from "../assets/icons/twitterIcon.svg";
 import facebookIcon from "../assets/icons/facebookIcon.svg";
+import { useNavigate } from "react-router-dom";
 
 function Screen8() {
+  const navigate = useNavigate();
   return (
     <>
       <Uppernav options={["empty", "bowledIcon", "empty"]} />
@@ -33,10 +35,12 @@ function Screen8() {
             <img src={twitterIcon} alt="twitterIcon" />
             <img src={facebookIcon} alt="facebookIcon" />
           </div>
-          <p className={styles.redirect}>View leaderboard</p>
+          <p onClick={() => navigate("/screen9")} className={styles.redirect}>
+            View leaderboard
+          </p>
         </div>
         <div className={styles.btnBox}>
-          <button>Play Again</button>
+          <button onClick={() => navigate("/")}>Play Again</button>
         </div>
       </div>
     </>

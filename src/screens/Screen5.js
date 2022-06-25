@@ -3,8 +3,10 @@ import styles from "./Screen5.module.scss";
 import Uppernav from "../components/Uppernav";
 import Timer from "../components/Timer";
 import dummyCard from "../assets/dummyCard.svg";
+import { useNavigate } from "react-router-dom";
 
 function Screen5() {
+  const navigate = useNavigate();
   return (
     <>
       <Uppernav options={["backIcon", "bowledIcon", "profileIcon"]} />
@@ -20,7 +22,7 @@ function Screen5() {
             <p>00.00</p>
           </div>
         </div>
-        <div className={styles.cardBox}>
+        <div onClick={() => navigate("/screen6")} className={styles.cardBox}>
           <img src={dummyCard} alt="dummyCard" />
         </div>
       </div>

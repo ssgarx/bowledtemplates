@@ -5,10 +5,8 @@
 .box1 {
   @include standardBoxMargin;
   @include verticalCenter;
-  border: 1px solid blue;
   .upperSection {
     flex: 0.2;
-    border: 1px solid red;
     width: 100%;
     > p:nth-child(1) {
       font-style: normal;
@@ -26,7 +24,6 @@
   }
   .lowerSection {
     flex: 1;
-    border: 1px solid green;
     width: 100%;
 
     height: 100%;

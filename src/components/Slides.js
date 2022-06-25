@@ -5,8 +5,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import dummyCard from "../assets/dummyCard.svg";
+import { useNavigate } from "react-router-dom";
 
 function Slides() {
+  const navigate = useNavigate();
+
   const settings = {
     centerMode: true,
     centerPadding: "10px",
@@ -38,15 +41,27 @@ function Slides() {
       <Slider {...settings}>
         <>
           <p className={styles.playerName}>Rohit Sharma</p>
-          <img src={dummyCard} alt="dummyCard" />
+          <img
+            onClick={() => navigate("/screen4")}
+            src={dummyCard}
+            alt="dummyCard"
+          />
         </>
         <>
           <p className={styles.playerName}>Lorem Ipsum</p>
-          <img src={dummyCard} alt="dummyCard" />
+          <img
+            onClick={() => navigate("/screen4")}
+            src={dummyCard}
+            alt="dummyCard"
+          />
         </>
         <>
           <p className={styles.playerName}>Dolor Sit</p>
-          <img src={dummyCard} alt="dummyCard" />
+          <img
+            onClick={() => navigate("/screen4")}
+            src={dummyCard}
+            alt="dummyCard"
+          />
         </>
       </Slider>
     </div>
