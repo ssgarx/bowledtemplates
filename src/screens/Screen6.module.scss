@@ -27,7 +27,7 @@
         width: 40%;
         height: 40%;
         object-fit: contain;
-        animation: moveDown 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        animation: moveDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
       }
     }
   }
@@ -87,14 +87,14 @@
         height: 60%;
         object-fit: contain;
         // animation: fitInPlace 1.5s ease;
-        animation: fitInPlace 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        animation: fitInPlace 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
       }
     }
   }
 }
 @keyframes fitInPlace {
   0% {
-    transform: scale(8);
+    transform: scale(3);
   }
   100% {
     transform: scale(1);
