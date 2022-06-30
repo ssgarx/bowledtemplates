@@ -39,11 +39,13 @@
   transform: translate(-50%, 60%);
   animation: shuffleCard5Animation 0.8s forwards infinite;
 }
+
 //1 = 45 1  -- 40 0
 //2 = 51 26 -- 45 25
 //3 = 57 57 -- 50  50
 //4 = 63 82 -- 55 75
 //5 = 69 108 -- 60 100
+
 @keyframes shuffleCard1Animation {
   0% {
     transform: translate(-50%, 40%);
